@@ -1,5 +1,27 @@
-import { createStore } from 'vuex';
-import api from '@/services/api';
+import { createStore } from "vuex";
+import api from "@/services/api";
+
+const initialState = {
+  nome: "Roger",
+  carregando: false,
+  usuarios: [] as Usuario[]
+};
+
+export const store = createStore<State>({
+  state: initialState,
+  mutations: {
+    async obterUsuarios(state) {
+      state.carregando = true;
+      try {
+        const response = await api.get<Usuario[]>("usuarios");
+        state.usuarios = response.data;
+      } catch (error) {}
+      state.carregando = false;
+    }
+  },
+  actions: {},
+  modules: {}
+});
 
 export interface Usuario {
   id: string;
@@ -19,28 +41,6 @@ export type UsuarioProps = {
 
 export type State = {
   nome: string;
-  usuario: Usuario;
+  carregando: boolean;
   usuarios: Usuario[];
 };
-
-const initialState = {
-  nome: 'Roger',
-  usuario: {} as Usuario,
-  usuarios: [] as Usuario[],
-};
-
-export const store = createStore<State>({
-  state: initialState,
-  mutations: {
-    async obterUsuarios(state, { id }: { id: number }) {
-      debugger;
-      console.log('obter usuario', id);
-      const response = await api.get<Usuario[]>('usuarios');
-      state.usuarios = response.data;
-      state.nome = response.data[0].name;
-      console.log('@usuarios', state.usuarios);
-    },
-  },
-  actions: {},
-  modules: {},
-});

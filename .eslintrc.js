@@ -17,6 +17,7 @@ module.exports = {
     'vue/no-multiple-template-root': 'off',
     'quotes': 'off',
     'semi': 'off',
-    'space-before-function-paren': 'off'
+    'space-before-function-paren': 'off',
+    'no-extra-boolean-cast': 'off'
   }
 }

@@ -22,7 +22,7 @@ module.exports = {
     },
   },
 
-  variants: ['responsive', 'hover'],
+  variants: ['responsive', 'hover', 'active', 'focus'],
 }
 
 // const TailwindLinelay = require('tailwindcss-linelay');

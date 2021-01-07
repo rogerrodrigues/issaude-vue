@@ -1,20 +1,12 @@
 <template>
-  <div class="container mx-auto">
-    <img alt="Vue logo" src="/islogo-1.png" />
-    {{ $store.state.nome }}
-    <Usuarios />
-    <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
-  </div>
+  <img alt="Vue logo" src="/islogo-1.png" />
+  {{ $store.state.nome }}
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import Usuarios from '@/components/Usuarios.vue'; // @ is an alias to /src
-
+import { Options, Vue } from "vue-class-component";
 @Options({
-  components: {
-    Usuarios,
-  },
+  components: {}
 })
 export default class Home extends Vue {}
 </script>

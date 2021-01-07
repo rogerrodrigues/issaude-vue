@@ -1,11 +1,15 @@
 <template>
-  <div class="p-3">
-    <div class="mx-auto max-w-screen-lg flex items-center justify-center">
-      <router-link class="mx-2 btn" to="/">Home</router-link>
-      <router-link to="/about" class="mx-2 btn">Usuarios</router-link>
+  <div class="mx-auto bg-gray-800 w-full flex items-center justify-center">
+    <div class="p-3">
+      <router-link class="mx-2 btn btn-default" to="/">Home</router-link>
+      <router-link to="/usuarios" class="mx-2 btn btn-default">
+        Usuarios
+      </router-link>
     </div>
   </div>
-  <router-view />
+  <div class="container pt-8 mx-auto mb-32">
+    <router-view />
+  </div>
 </template>
 
 <style lang="scss">
