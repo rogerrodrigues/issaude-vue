@@ -2,7 +2,7 @@ import { createStore } from "vuex";
 import api from "@/services/api";
 
 const initialState = {
-  nome: "Roger",
+  nome: "Roger Rodrigues",
   carregando: false,
   usuarios: [] as Usuario[]
 };

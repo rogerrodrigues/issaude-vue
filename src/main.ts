@@ -4,7 +4,7 @@ import router from "./router";
 import { store } from "./store";
 import Toaster from "@meforma/vue-toaster";
 
-const vm = createApp(App)
+createApp(App)
   .use(Toaster)
   .use(store)
   .use(router)

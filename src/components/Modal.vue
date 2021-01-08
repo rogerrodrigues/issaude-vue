@@ -6,7 +6,8 @@
 
   <div
     class="transition  delay-200 ease-in z-20
-     w-3/6  left-1/4 mx-auto p-4
+    w-full
+     md:w-3/6  md:left-1/4 mx-auto p-4
   fixed  top-20 bg-gray-50 rounded-lg flex flex-col justify-between"
     style="min-height: 200px;"
   >
@@ -33,13 +34,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, computed } from "vue";
-import { Usuario } from "@/store";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  props: ["nome", "titulo", "onClose", "onOk"],
-  setup(props) {
-    return {};
-  }
+  props: ["nome", "titulo", "onClose", "onOk"]
 });
 </script>

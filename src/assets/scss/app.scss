@@ -7,6 +7,15 @@ body{
 //  background-color: #EFF7F6;
 }
 
+:root {
+  --primary-color: #0071fe;
+  --error-color: #f23648;
+  --error-bg-color: #fddfe2;
+  --success-color: #21a67a;
+  --success-bg-color: #e0eee4;
+}
+
+
 @layer components{
     .btn{
         @apply bg-blue-500 inline-block mx-2 md:mx-0 py-2 px-4 text-white rounded-md hover:bg-blue-900 hover:cursor-pointer;

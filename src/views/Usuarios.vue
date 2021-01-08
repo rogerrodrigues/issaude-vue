@@ -9,8 +9,8 @@
         v-model="busca"
       />
     </div>
-    <router-link to="/usuarios/0">
-      <div class="mt-2 md:mt-0 btn text-center">
+    <router-link class="mt-2 md:mt-0  btn text-center" to="/usuarios/0">
+      <div>
         Adicionar usuário
       </div>
     </router-link>
@@ -80,7 +80,6 @@ export default defineComponent({
   },
   methods: {
     mostrarModalRemover(usuario: Usuario) {
-      console.log("openModal", usuario);
       this.mostrarModal = true;
       this.usuarioRemover = usuario;
     },
